@@ -1,6 +1,6 @@
 {
     "name": "kolaz-bundle-expressjs",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Kolaz bundle provides ExpressJS app and router",
     "repository": {
         "type": "git",
