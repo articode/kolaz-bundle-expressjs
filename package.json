@@ -1,0 +1,33 @@
+{
+    "name": "kolaz-bundle-expressjs",
+    "version": "0.0.0",
+    "description": "Kolaz bundle provides ExpressJS app and router",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:articode/kolaz-bundle-expressjs.git"
+    },
+    "keywords": [
+        "nodejs",
+        "framework",
+        "kolaz",
+        "express"
+    ],
+    "author": "Igor Stojadinovic",
+    "license": "ISC",
+    "files": [
+        "/src"
+    ],
+    "bugs": {
+        "url": "https://github.com/articode/kolaz/issues"
+    },
+    "homepage": "https://github.com/articode/kolaz#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "kolaz": "^0.1.1",
+        "lodash": "^4.17.15"
+    },
+    "peerDependencies": {
+        "kolaz": "^0.1.1"
+    }
+}
