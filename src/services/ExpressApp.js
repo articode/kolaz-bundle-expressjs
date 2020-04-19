@@ -5,15 +5,15 @@ import { QueryNormalizer } from "../middleware/QueryNormalizer";
 export function ExpressApp(params) {
     let app = express();
 
-    if (params.get("express.middleware.cors")) {
+    if (params.has("express.middleware.cors") && params.get("express.middleware.cors")) {
         app.use(cors());
     }
-    if (params.get("express.middleware.json")) {
+    if (params.has("express.middleware.json") && params.get("express.middleware.json")) {
         app.use(express.json());
     }
-    if (params.get("express.middleware.queryNormalizer")) {
+    if (params.has("express.middleware.queryNormalizer") && params.get("express.middleware.queryNormalizer")) {
         app.use(QueryNormalizer);
     }
-    
+
     return app;
 }

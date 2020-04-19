@@ -6,9 +6,13 @@ export class ExpressServer {
     }
 
     start() {
-        let port = this.params.get("server.port");
+        let port = this.params.has("server.port") ? this.params.get("server.port") : 3000;
         this.server = this.express.listen(port, () => {
-            this.log.info(`Listening on port ${port}...`);
+            if (this.log) {
+                this.log.debug(`Listening on port ${port}...`);
+            }
         });
+
+        return this.server;
     }
 }

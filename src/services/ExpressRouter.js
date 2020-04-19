@@ -1,3 +1,5 @@
+import { Response } from "kolaz/Component/Response";
+
 export class ExpressRouter {
     constructor(express, controllerResolver, log) {
         this.express = express;
@@ -25,9 +27,15 @@ export class ExpressRouter {
 
                 Promise.resolve(result)
                 .then((result) => {
-                    if (!response.headersSent) {
-                        response.send(result);
-                        next();
+                    if (result instanceof Response) {
+                        response.send(result.content);
+                        return next();
+                    }
+                    else {
+                        if (!response.headersSent) {
+                            response.send(result);
+                            return next();
+                        }
                     }
                 })
                 .catch((error) => {

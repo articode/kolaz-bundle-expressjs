@@ -2,6 +2,9 @@
     "name": "kolaz-bundle-expressjs",
     "version": "0.1.1",
     "main": "src/index.js",
+    "scripts": {
+        "dev": "node dev/index.esm.js"
+    },
     "description": "Kolaz bundle provides ExpressJS app and router",
     "repository": {
         "type": "git",
@@ -25,10 +28,13 @@
     "dependencies": {
         "cors": "^2.8.5",
         "express": "^4.17.1",
-        "kolaz": "^0.1.1",
         "lodash": "^4.17.15"
     },
     "peerDependencies": {
-        "kolaz": "^0.1.1"
+        "kolaz": "^0.2.0"
+    },
+    "devDependencies": {
+        "config": "^3.3.1",
+        "esm": "^3.2.25"
     }
 }

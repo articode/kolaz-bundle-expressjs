@@ -3,7 +3,7 @@ import { ExpressApp } from "./services/ExpressApp";
 import { ExpressRouter } from "./services/ExpressRouter";
 import { ExpressServer } from "./services/ExpressServer";
 
-export class ExpressJs extends Bundle {
+export class ExpressJsBundle extends Bundle {
     configureContainer(container) {
         container.add("express", ExpressApp, ["params"]);
         container.add("server", ExpressServer, ["express", "log", "params"]);
